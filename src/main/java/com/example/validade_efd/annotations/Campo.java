@@ -56,4 +56,16 @@ public @interface Campo {
      * @return true se o campo for obrigatório, false caso contrário.
      */
     boolean obrigatorio() default false;
+
+    /**
+     * Indica se o campo é obrigatório na entrada (opcional, padrão false).
+     * @return true se o campo for obrigatório na entrada, false caso contrário.
+     */
+    boolean obrigatorioEntrada() default false;
+
+    /**
+     * Indica se o campo é obrigatório na saída (opcional, padrão false).
+     * @return true se o campo for obrigatório na saída, false caso contrário.
+     */
+    boolean obrigatorioSaida() default false;
 }
