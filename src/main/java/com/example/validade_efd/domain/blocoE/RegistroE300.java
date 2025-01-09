@@ -11,6 +11,7 @@ import com.example.validade_efd.annotations.Campo;
 import com.example.validade_efd.annotations.MetadadosRegistro;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
 import com.example.validade_efd.enums.TipoCampo;
+import com.example.validade_efd.enums.UnidadeFederativa;
 
 @Getter
 @ToString
@@ -23,7 +24,7 @@ public class RegistroE300 {
     private String reg;
 
     @Campo(numero = 2, nome = "UF", descricao = "Sigla da unidade da federação a que se refere à apuração do FCP e do ICMS Diferencial de Alíquota da UF de Origem/Destino", tipo = TipoCampo.C, tamanho = 2, obrigatorio = true)
-    private String uf;
+    private UnidadeFederativa uf;
 
     @Campo(numero = 3, nome = "DT_INI", descricao = "Data inicial a que a apuração se refere", tipo = TipoCampo.N, tamanho = 8, obrigatorio = true)
     private LocalDate dtIni;

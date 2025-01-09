@@ -10,6 +10,7 @@ import com.example.validade_efd.annotations.MetadadosRegistro;
 import com.example.validade_efd.enums.IndicadorVeiculoOperacao;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
 import com.example.validade_efd.enums.TipoCampo;
+import com.example.validade_efd.enums.UnidadeFederativa;
 
 @Getter
 @ToString
@@ -28,7 +29,7 @@ public class RegistroC175 {
     private String cnpj;
 
     @Campo(numero = 4, nome = "UF", descricao = "Sigla da unidade da federação da Concessionária", tipo = TipoCampo.C, tamanho = 2, obrigatorioEntrada = false, obrigatorioSaida = false)
-    private String uf;
+    private UnidadeFederativa uf;
 
     @Campo(numero = 5, nome = "CHASSI_VEIC", descricao = "Chassi do veículo", tipo = TipoCampo.C, tamanho = 17, obrigatorioEntrada = true, obrigatorioSaida = true)
     private String chassiVeic;

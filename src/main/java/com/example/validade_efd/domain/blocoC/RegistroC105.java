@@ -10,6 +10,7 @@ import com.example.validade_efd.annotations.MetadadosRegistro;
 import com.example.validade_efd.enums.IndicadorTipoOperacaoCombustivel;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
 import com.example.validade_efd.enums.TipoCampo;
+import com.example.validade_efd.enums.UnidadeFederativa;
 
 @Getter
 @ToString
@@ -25,5 +26,5 @@ public class RegistroC105 {
     private IndicadorTipoOperacaoCombustivel oper;
 
     @Campo(numero = 3, nome = "UF", descricao = "Sigla da UF de destino do ICMS_ST", tipo = TipoCampo.C, tamanho = 2, obrigatorioEntrada = true, obrigatorioSaida = true)
-    private String uf;
+    private UnidadeFederativa uf;
 }

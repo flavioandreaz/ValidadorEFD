@@ -40,10 +40,16 @@ public @interface Campo {
     TipoCampo tipo();
 
     /**
-     * Tamanho máximo do campo (opcional, padrão 0).
+     * Tamanho exato do campo (opcional, padrão 0).
      * @return O tamanho máximo do campo.
      */
     int tamanho() default 0;
+
+    /**
+     * Limite de caracteres do campo (opcional, padrão 0).
+     * @return
+     */
+    int limiteCaracteres() default 0;
 
     /**
      * Número de casas decimais (opcional, padrão 0).

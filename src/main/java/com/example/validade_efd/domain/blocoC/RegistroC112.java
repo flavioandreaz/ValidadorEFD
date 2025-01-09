@@ -12,6 +12,7 @@ import com.example.validade_efd.annotations.MetadadosRegistro;
 import com.example.validade_efd.enums.CodigoModeloDocumentoArrecadacao;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
 import com.example.validade_efd.enums.TipoCampo;
+import com.example.validade_efd.enums.UnidadeFederativa;
 
 @Getter
 @ToString
@@ -27,7 +28,7 @@ public class RegistroC112 {
     private CodigoModeloDocumentoArrecadacao codDa;
 
     @Campo(numero = 3, nome = "UF", descricao = "Unidade federada beneficiária do recolhimento", tipo = TipoCampo.C, tamanho = 2, obrigatorioEntrada = true, obrigatorioSaida = true)
-    private String uf;
+    private UnidadeFederativa uf;
 
     @Campo(numero = 4, nome = "NUM_DA", descricao = "Número do documento de arrecadação", tipo = TipoCampo.C, obrigatorioEntrada = false, obrigatorioSaida = false)
     private String numDa;

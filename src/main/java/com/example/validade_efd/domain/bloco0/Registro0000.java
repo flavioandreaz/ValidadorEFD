@@ -1,14 +1,16 @@
 package com.example.validade_efd.domain.bloco0;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
+
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import com.example.validade_efd.annotations.Campo;
 import com.example.validade_efd.annotations.MetadadosRegistro;
+import com.example.validade_efd.domain.Registro;
 import com.example.validade_efd.enums.CodigoFinalidade;
 import com.example.validade_efd.enums.CodigoVersao;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
@@ -19,10 +21,11 @@ import com.example.validade_efd.enums.UnidadeFederativa;
 
 @Getter
 @ToString
-@EqualsAndHashCode
-@Builder
+
+
+@NoArgsConstructor
 @MetadadosRegistro(nivelHierarquico = 0, ocorrencia = OcorrenciaRegistro.UMA_VEZ)
-public class Registro0000 {
+public class Registro0000 extends Registro {
     
     @Campo(numero = 1, nome = "REG", descricao = "Texto fixo contendo \"0000\"", tipo = TipoCampo.C, tamanho = 4, obrigatorio = true)
     private String reg;
@@ -39,7 +42,7 @@ public class Registro0000 {
     @Campo(numero = 5, nome = "DT_FIN", descricao = "Data final das informações contidas no arquivo", tipo = TipoCampo.N, tamanho = 8, obrigatorio = true)
     private LocalDate dtFin;    
 
-    @Campo(numero = 6, nome = "NOME", descricao = "Nome empresarial da entidade", tipo = TipoCampo.C, tamanho = 100, obrigatorio = true)
+    @Campo(numero = 6, nome = "NOME", descricao = "Nome empresarial da entidade", tipo = TipoCampo.C, limiteCaracteres = 100, obrigatorio = true)
     private String nome;
 
     @Campo(numero = 7, nome = "CNPJ", descricao = "Número de inscrição da entidade no CNPJ", tipo = TipoCampo.N, tamanho = 14, obrigatorio = false)

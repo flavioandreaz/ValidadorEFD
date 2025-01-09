@@ -7,7 +7,7 @@ import lombok.ToString;
 
 import com.example.validade_efd.annotations.Campo;
 import com.example.validade_efd.annotations.MetadadosRegistro;
-import com.example.validade_efd.domain.ClassificacaoItemEnergiaEletrica;
+import com.example.validade_efd.enums.CodigoServico;
 import com.example.validade_efd.enums.IndicadorReceita;
 import com.example.validade_efd.enums.OcorrenciaRegistro;
 import com.example.validade_efd.enums.TipoCampo;
@@ -29,7 +29,7 @@ public class Registro1510 {
     private String codItem;
 
     @Campo(numero = 4, nome = "COD_CLASS", descricao = "Código de classificação do item de energia elétrica, conforme a Tabela 4.4.1", tipo = TipoCampo.N, tamanho = 4, obrigatorio = true)
-    private ClassificacaoItemEnergiaEletrica codClass;
+    private CodigoServico codClass;
 
     @Campo(numero = 5, nome = "QTD", descricao = "Quantidade do item", tipo = TipoCampo.N, tamanho = 3, obrigatorio = false)
     private Double qtd;
